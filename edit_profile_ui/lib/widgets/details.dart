@@ -3,7 +3,6 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import './bottom_bar.dart';
 
 class Details extends StatelessWidget {
   const Details({Key? key}) : super(key: key);
