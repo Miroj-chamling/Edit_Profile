@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blue.shade300,
         dividerColor: Colors.black,
         backgroundColor: Color(0xffb003060),
+        accentColor: Color(0xffbC78E53),
       ),
       title: title,
       home: ProfilePage(),

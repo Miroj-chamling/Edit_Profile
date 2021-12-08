@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 
 class Details extends StatelessWidget {
@@ -29,6 +30,19 @@ class Details extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 15.0),
             child: buildDetails("Study Level", "Bachelor 1st Year"),
+          ),
+          SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {
+              print('changes saved'); //....
+            },
+            child: const Text(
+              "Save Changes",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            style: ElevatedButton.styleFrom(
+              primary: Theme.of(context).accentColor,
+            ),
           ),
         ],
       ),
