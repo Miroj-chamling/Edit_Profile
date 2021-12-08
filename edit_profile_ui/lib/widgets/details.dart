@@ -1,6 +1,9 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import './bottom_bar.dart';
 
 class Details extends StatelessWidget {
   const Details({Key? key}) : super(key: key);
@@ -33,9 +36,17 @@ class Details extends StatelessWidget {
           ),
           SizedBox(height: 10),
           ElevatedButton(
-            onPressed: () {
-              print('changes saved'); //....
-            },
+            onPressed: () => showDialog(
+                context: context,
+                builder: (BuildContext builderContext) {
+                  Future.delayed(Duration(seconds: 1), () {
+                    Navigator.of(builderContext).pop();
+                  });
+
+                  return AlertDialog(
+                    content: Text('Changes Saved'),
+                  );
+                }),
             child: const Text(
               "Save Changes",
               style: TextStyle(fontWeight: FontWeight.bold),
